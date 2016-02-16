@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PanView">
+        <attr name="itemCount" format="integer" />
+        <attr name="radius" format="dimension" />
+        <attr name="innerRadius" format="dimension" />
+        <attr name="lineWidth" format="dimension" />
+        <attr name="radiusLineWidth" format="dimension" />
+        <attr name="backgroundColor" format="color" />
+        <attr name="pressedColor" format="color" />
+        <attr name="itemColor" format="color" />
+        <attr name="startAngle" format="integer" />
+        <attr name="centerViewLayout" format="reference" />
+    </declare-styleable>
+</resources>
