@@ -103,6 +103,7 @@ public class CircularMenu extends ViewGroup {
         int childWidth = getChildAt(INDEX_CENTER).getMeasuredWidth();
         int childHeight = getChildAt(1).getMeasuredHeight();
 
+
         getChildAt(INDEX_CENTER).layout(mw - childWidth / 2, mh - childHeight / 2, mw + childWidth / 2, mh + childHeight / 2);
         double startAnl = startAngle * Math.PI / 180;
         double avgAnl = 2 * Math.PI / itemCount;
