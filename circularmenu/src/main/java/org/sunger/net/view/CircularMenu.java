@@ -113,8 +113,8 @@ public class CircularMenu extends ViewGroup {
             int width = childView.getMeasuredWidth();
             int height = childView.getMeasuredHeight();
             double childRadius = radius - (radius - innerRadius - radiusLineWidth) / 2;
-            int x = (int) (mw + (childRadius + 2) * Math.cos(avgAnl * (itemCount - i) - startAnl - avgAnl / 2));
-            int y = (int) (mh + (childRadius + 2) * Math.sin(avgAnl * (itemCount - i) - startAnl - avgAnl / 2));
+            int x = (int) (mw + childRadius * Math.cos(avgAnl * (itemCount - i) - startAnl - avgAnl / 2));
+            int y = (int) (mh + childRadius * Math.sin(avgAnl * (itemCount - i) - startAnl - avgAnl / 2));
             childView.layout(x - width / 2, y - height / 2, x + width / 2, y + height / 2);
         }
     }
