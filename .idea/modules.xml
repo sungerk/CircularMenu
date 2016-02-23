@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ProjectModuleManager">
-    <modules />
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CircularMenu.iml" filepath="$PROJECT_DIR$/CircularMenu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/circularmenu/circularmenu.iml" filepath="$PROJECT_DIR$/circularmenu/circularmenu.iml" />
+    </modules>
   </component>
 </project>

@@ -58,7 +58,6 @@ public class CircularMenu extends ViewGroup {
 
     public CircularMenu(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
-
     }
 
     public CircularMenu(Context context, AttributeSet attrs, int defStyleAttr) {
@@ -97,14 +96,12 @@ public class CircularMenu extends ViewGroup {
 
     @Override
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
-        int mw = (r - l) / 2;
-        int mh = (b - t) / 2;
-        onCustomLayout(mw, mh);
+        int halfWidth = (r - l) / 2;
+        int halfHeight = (b - t) / 2;
+        onCustomLayout(halfWidth, halfHeight);
         int childWidth = getChildAt(INDEX_CENTER).getMeasuredWidth();
         int childHeight = getChildAt(1).getMeasuredHeight();
-
-
-        getChildAt(INDEX_CENTER).layout(mw - childWidth / 2, mh - childHeight / 2, mw + childWidth / 2, mh + childHeight / 2);
+        getChildAt(INDEX_CENTER).layout(halfWidth - childWidth / 2, halfHeight - childHeight / 2, halfWidth + childWidth / 2, halfHeight + childHeight / 2);
         double startAnl = startAngle * Math.PI / 180;
         double avgAnl = 2 * Math.PI / itemCount;
         if (getChildCount() < 2)
@@ -114,8 +111,8 @@ public class CircularMenu extends ViewGroup {
             int width = childView.getMeasuredWidth();
             int height = childView.getMeasuredHeight();
             double childRadius = radius - (radius - innerRadius - radiusLineWidth) / 2;
-            int x = (int) (mw + childRadius * Math.cos(avgAnl * (itemCount - i) - startAnl - avgAnl / 2));
-            int y = (int) (mh + childRadius * Math.sin(avgAnl * (itemCount - i) - startAnl - avgAnl / 2));
+            int x = (int) (halfWidth + childRadius * Math.cos(avgAnl * (itemCount - i) - startAnl - avgAnl / 2));
+            int y = (int) (halfHeight + childRadius * Math.sin(avgAnl * (itemCount - i) - startAnl - avgAnl / 2));
             childView.layout(x - width / 2, y - height / 2, x + width / 2, y + height / 2);
         }
     }
